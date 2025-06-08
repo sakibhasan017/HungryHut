@@ -1,12 +1,13 @@
-.sidebar{
+.sidebar {
   width: 18%;
   min-height: 100vh;
-  border: 1.5px solid #a9a9a9;
+  border: 1.5px solid #c3dafe; 
   border-top: 0;
-  font-size: max(1vw,10px);
+  font-size: max(1vw, 10px);
+  background-color: #f0f4ff; 
 }
 
-.sidebar-options{
+.sidebar-options {
   padding-top: 50px;
   padding-left: 20%;
   display: flex;
@@ -14,24 +15,32 @@
   gap: 20px;
 }
 
-.sidebar-option{
+.sidebar-option {
   display: flex;
   align-items: center;
   gap: 12px;
-  border: 1px solid #a9a9a9;
+  border: 1px solid #c3dafe; 
   border-right: 0;
   padding: 8px 10px;
   border-radius: 3px 0px 0px 3px;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.sidebar-option.active{
-  background-color: #fff0ed;
-  border-color: tomato;
+.sidebar-option:hover {
+  background-color: #e0edff; 
+  color: #1E3A8A; 
+}
+
+.sidebar-option.active {
+  background-color: #e6f0ff; 
+  border-color: #1E3A8A;     
+  color: #1E3A8A;
+  font-weight: 600;
 }
 
 @media (max-width: 900px) {
-  .sidebar-option p{
+  .sidebar-option p {
     display: none;
   }
 }

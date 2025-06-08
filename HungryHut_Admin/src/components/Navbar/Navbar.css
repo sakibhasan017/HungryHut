@@ -1,14 +1,29 @@
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 4%;
 }
 
-.navbar .logo{
-  width: max(10%,80px);
+.logo-text h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1E3A8A; 
+  margin: 0;
+  line-height: 1;
 }
 
-.navbar .profile{
+.logo-text h1 span {
+  color: #1E3A8A; 
+}
+
+.logo-text p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2e2e2e;
+  margin-top: 2px;
+}
+
+.profile {
   width: 40px;
 }
