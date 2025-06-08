@@ -67,49 +67,10 @@
   background-color: #1D4ED8; 
 }
 
-.cart-promocode {
-  flex: 1;
-}
-
-.cart-promocode p {
-  color: #6B7280; 
-}
-
-.cart-promocode-input {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #F3F4F6; 
-  border-radius: 4px;
-}
-
-.cart-promocode-input input {
-  background: transparent;
-  border: none;
-  outline: none;
-  padding-left: 10px;
-}
-
-.cart-promocode-input button {
-  width: max(10vw, 150px);
-  padding: 12px 5px;
-  background-color: #1E3A8A; 
-  border: none;
-  color: white;
-  border-radius: 4px;
-}
-
-.cart-promocode-input button:hover {
-  background-color: #172554; 
-}
 
 @media (max-width: 750px) {
   .cart-bottom {
     flex-direction: column-reverse;
   }
 
-  .cart-promocode {
-    justify-content: start;
-  }
 }
