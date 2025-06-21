@@ -50,11 +50,25 @@ const PlaceOrder = () => {
     
   
     if(response.data.success){
+
       const {session_url} =response.data;
+
+      for (const item of orderItems) {
+          try {
+            await axios.patch(`${url}/api/food/increment-counter/${item._id}`, {}, {
+              headers: { token }
+            });
+          } catch (err) {
+            console.error("Counter update failed for:", item.name);
+          }
+        }
+
       window.location.replace(session_url);
     }else{
       alert("Error");
     }
+
+
     
   }
   

@@ -8,6 +8,11 @@ import Footer from './components/Footer/Footer'
 import LoginPopup from './components/LoginPopup/LoginPopup'
 import Verify from './pages/Verify/Verify'
 import MyOrders from './pages/MyOrders/MyOrders'
+import Profile from './pages/Profile/Profile'
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy'
+import Terms from './components/Terms/Terms'
+import NutritionSuggest from './pages/NutritionSuggest/NutritionSuggest'
+import ScrollToTopWithHash from './components/ScrollToTopWithHash/ScrollToTopWithHash'
 
 
 const App = () => {
@@ -19,12 +24,17 @@ const App = () => {
     {showLogin?<LoginPopup setShowLogin={setShowLogin}/>:<></>}
     <div className='app'>
       <Navbar setShowLogin={setShowLogin}/>
+      <ScrollToTopWithHash/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/order' element={<PlaceOrder/>}/>
         <Route path='/verify' element={<Verify/>} />
         <Route path='/myorders' element={<MyOrders/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+        <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
+        <Route path="/terms-and-conditions" element={<Terms/>}/>
+        <Route path='/nutrition-suggest' element={<NutritionSuggest/>}/>
       </Routes>
     </div>
     <Footer/>

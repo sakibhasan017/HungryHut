@@ -1,0 +1,41 @@
+.trending-food {
+  margin: 60px auto;
+  padding: 20px;
+  max-width: 1300px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.trending-food h2 {
+  font-size: 28px;
+  color: #1E3A8A; 
+  margin-bottom: 20px;
+}
+
+.trending-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none; 
+}
+
+.trending-scroll::-webkit-scrollbar {
+  display: none; 
+}
+
+.trending-scroll > * {
+  flex: 0 0 auto;
+}
+
+
+.trending-scroll .food-item {
+  flex: 0 0 auto;
+  width: 200px; 
+}
+
+.trending-scroll .food-item .food-item-image {
+  height: 140px; 
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+

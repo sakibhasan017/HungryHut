@@ -146,6 +146,27 @@
   color: #60A5FA; 
 }
 
+.nutrition-suggest-btn {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #00B4D8, #0077B6);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.nutrition-suggest-btn:hover {
+  background: linear-gradient(135deg, #0077B6, #023E8A);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+
 
 @media (max-width:750px) {
   .navbar-menu {

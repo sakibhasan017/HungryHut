@@ -35,6 +35,14 @@
   color: #1E3A8A;
 }
 
+.order-filter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
 @media (max-width: 1000px) {
   .order-item {
     font-size: 12px;

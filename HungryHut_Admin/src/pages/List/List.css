@@ -1,6 +1,6 @@
 .list-table-format {
   display: grid;
-  grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
   align-items: center;
   gap: 10px;
   padding: 12px 15px;
@@ -18,16 +18,40 @@
 
 .list-table-format img {
   width: 50px;
+  border-radius: 5px;
 }
 
-.cursor {
+.list-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: none;
+  font-size: 12px;
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.cursor:hover {
-  color: red;
-  font-weight: bold;
+.edit-btn {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.delete-btn {
+  background-color: #dc2626;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
 }
 
 @media (max-width: 600px) {

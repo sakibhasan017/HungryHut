@@ -76,3 +76,11 @@
   font-weight: 500;
   cursor: pointer;
 }
+
+.forgot-password {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 10px;
+  font-size: 14px;
+}

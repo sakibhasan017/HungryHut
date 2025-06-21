@@ -1,0 +1,41 @@
+.terms-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  color: #1e293b;
+  line-height: 1.7;
+}
+
+.terms-container h1 {
+  font-size: 36px;
+  color: #1e40af;
+  margin-bottom: 10px;
+}
+
+.terms-container p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.terms-container section {
+  margin-top: 30px;
+}
+
+.terms-container h2 {
+  font-size: 22px;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.terms-container a {
+  color: #0ea5e9;
+  text-decoration: none;
+}
+
+.terms-container a:hover {
+  text-decoration: underline;
+}

@@ -35,7 +35,7 @@ const createToken=(id)=>{
 }
 
 const registerUser=async(req,res)=>{
-  const {name,password,email}=req.body;
+  const {name,password,email,petName}=req.body;
   try {
     const exist=await userModel.findOne({email});
     if(exist){
@@ -56,7 +56,8 @@ const registerUser=async(req,res)=>{
     const newUser=new userModel({
       name:name,
       email:email,
-      password:hashedPassword
+      password:hashedPassword,
+      petName: petName
     })
 
     const user= await newUser.save()
@@ -69,4 +70,71 @@ const registerUser=async(req,res)=>{
   }
 }
 
-export {logInUser,registerUser}
+// Change Pass
+
+const changePass= async (req,res)=>{
+  const {currentPass,newPass} = req.body;
+  try {
+    const user = await userModel.findById(req.userId);
+    if (!user) return res.json({ success: false, message: 'User not found' });
+    const isMatch = await bcrypt.compare(currentPass, user.password);
+    if (!isMatch) {
+      return res.json({ success: false, message: 'Current password is incorrect' });
+    }
+    if (newPass.length < 8) {
+      return res.json({ success: false, message: 'Password must be at least 8 characters' });
+    }
+    const hashedPassword = await bcrypt.hash(newPass, 10);
+    user.password = hashedPassword;
+    await user.save();
+
+    res.json({ success: true, message: 'Password updated successfully' });
+  } catch (error) {
+    console.log(error);
+    res.json({success: false,message: "Error" });
+  }
+}
+
+const getUserProfile = async (req, res) => {
+  try {
+    const user = await userModel.findById(req.userId).select("name email");
+    if (!user) return res.json({ success: false, message: "User not found" });
+
+    res.json({ success: true, user });
+  } catch (err) {
+    console.error(err);
+    res.json({ success: false, message: "Error" });
+  }
+};
+
+
+const resetPassword = async (req, res) => {
+  const { email, petName, newPassword } = req.body;
+
+  try {
+    const user = await userModel.findOne({ email }); 
+    if (!user) return res.json({ success: false, message: "User not found" });
+
+    if (user.petName !== petName) {
+      return res.json({ success: false, message: "Security answer is incorrect" });
+    }
+
+    if (newPassword.length < 8) {
+      return res.json({ success: false, message: "Password must be at least 8 characters" });
+    }
+
+    const hashedPassword = await bcrypt.hash(newPassword, 10);
+    user.password = hashedPassword;
+    await user.save();
+
+    res.json({ success: true, message: "Password reset successful" });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: "Error resetting password" });
+  }
+};
+
+
+
+
+export {logInUser,registerUser,changePass,getUserProfile,resetPassword}
