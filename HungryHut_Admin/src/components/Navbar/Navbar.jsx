@@ -9,7 +9,7 @@ const Navbar = () => {
         <h1>HungryHut<span>.</span></h1>
         <p>Admin Panel</p>
       </div>
-      <img className="profile" src={assets.profile_image} alt="Profile" />
+      <Link to="/"> <img className="profile" src={assets.profile_image} alt="Profile" /></Link>
     </div>
   );
 };
