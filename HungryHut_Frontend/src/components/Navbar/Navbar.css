@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .navbar .logo {
@@ -12,7 +13,7 @@
   white-space: nowrap;
 }
 
-
+/* ===== Menu ===== */
 .navbar-menu {
   display: flex;
   list-style: none;
@@ -21,12 +22,15 @@
   font-size: 18px;
 }
 
+/* ===== Right Side ===== */
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
+  flex-wrap: nowrap;
 }
 
+/* ===== Button ===== */
 .navbar button {
   background: transparent;
   color: #3B4B73; 
@@ -36,6 +40,7 @@
   border-radius: 50px;
   cursor: pointer;
   transition: 0.3s;
+  white-space: nowrap;
 }
 
 .navbar button:hover {
@@ -51,8 +56,12 @@
   cursor: pointer;
 }
 
+/* ===== Search/Cart Icon ===== */
 .navbar-search-icon {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .navbar-search-icon .dot {
@@ -65,50 +74,18 @@
   right: -8px;
 }
 
-@media (max-width:1050px) {
-  .navbar .logo {
-    width: 140px;
-  }
-  .navbar-menu {
-    font-size: 17px;
-    gap: 20px;
-  }
-  .navbar-right {
-    gap: 30px;
-  }
-  .navbar-right img {
-    width: 22px;
-  }
-  .navbar-right button {
-    padding: 8px 25px;
-  }
-}
-
-@media (max-width:900px) {
-  .navbar .logo {
-    width: 120px;
-  }
-  .navbar-menu {
-    font-size: 16px;
-    gap: 15px;
-  }
-  .navbar-right {
-    gap: 20px;
-  }
-  .navbar-right img {
-    width: 20px;
-  }
-  .navbar-right button {
-    padding: 7px 20px;
-    font-size: 15px;
-  }
-}
-
-.navbar-profile{
+/* ===== Profile Dropdown ===== */
+.navbar-profile {
   position: relative;
 }
 
-.nav-profile-dropdown{
+.navbar-profile img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.nav-profile-dropdown {
   position: absolute;
   display: none;
   right: 0;
@@ -146,9 +123,8 @@
   color: #60A5FA; 
 }
 
+/* ===== Nutrition Button ===== */
 .nutrition-suggest-btn {
-  display: inline-block;
-  margin-right: 1rem;
   padding: 0.5rem 1rem;
   background: linear-gradient(135deg, #00B4D8, #0077B6);
   color: #fff;
@@ -157,26 +133,38 @@
   font-size: 0.95rem;
   text-decoration: none;
   transition: background 0.3s, transform 0.2s;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
 }
 
 .nutrition-suggest-btn:hover {
   background: linear-gradient(135deg, #0077B6, #023E8A);
   transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
-
-
-@media (max-width:750px) {
-  .navbar-menu {
-    display: none;
-  }
-}
-
+/* ===== Responsive Adjustments ===== */
 @media (max-width: 1050px) {
   .navbar .logo {
     font-size: 2.5vw;
+  }
+
+  .navbar-menu {
+    font-size: 17px;
+    gap: 20px;
+  }
+
+  .navbar-right {
+    gap: 25px;
+  }
+
+  .navbar-right button {
+    padding: 8px 25px;
+  }
+
+  .navbar-profile img {
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -184,11 +172,125 @@
   .navbar .logo {
     font-size: 5vw;
   }
+
+  .navbar-menu {
+    font-size: 16px;
+    gap: 15px;
+  }
+
+  .navbar-right {
+    gap: 18px;
+  }
+
+  .navbar-right button {
+    padding: 7px 20px;
+    font-size: 15px;
+  }
+
+  .navbar-profile img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .nutrition-suggest-btn {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar .logo {
+    font-size: 6vw;
+  }
+
+  .navbar-right {
+    gap: 12px;
+  }
+
+  .nutrition-suggest-btn {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .navbar-search-icon img {
+    width: 22px;
+  }
+
+  .navbar-profile img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .navbar-right button {
+    padding: 6px 16px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 600px) {
+  .nutrition-suggest-btn {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .navbar-search-icon img {
+    width: 20px;
+  }
+
+  .navbar-profile img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .navbar-right button {
+    font-size: 13px;
+    padding: 5px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px 10px;
+  }
+
   .navbar .logo {
-    font-size: 6vw;
+    font-size: 6.5vw;
+  }
+
+  .navbar-right {
+    gap: 8px;
+  }
+
+  .navbar-right button {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .nutrition-suggest-btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.65rem;
+  }
+
+  .navbar-search-icon img {
+    width: 18px;
+  }
+
+  .navbar-profile img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav-profile-dropdown {
+    right: -20px; 
+    padding: 10px 20px;
+  }
+
+  .nav-profile-dropdown li {
+    font-size: 14px;
   }
 }
 
