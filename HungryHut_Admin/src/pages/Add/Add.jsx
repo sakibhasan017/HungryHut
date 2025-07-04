@@ -3,11 +3,11 @@ import './Add.css';
 import { assets } from '../../assets/assets';
 import axios from "axios";
 import { toast } from 'react-toastify';
-import Verify from '../../pages/Verify/Verify'; // import Verify component
+import Verify from '../../pages/Verify/Verify'; 
 
 const Add = ({ url }) => {
   const [image, setImage] = useState(false);
-  const [showVerify, setShowVerify] = useState(false); // to show verify modal
+  const [showVerify, setShowVerify] = useState(false); 
 
   const [data, setData] = useState({
     name: "",
