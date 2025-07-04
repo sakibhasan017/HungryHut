@@ -9,17 +9,16 @@ function createWindow() {
     width: 1200,
     height: 800,
     webPreferences: {
-      // preload: path.join(__dirname, 'preload.js'), // <-- Remove or ensure this file exists
       nodeIntegration: true,
       contextIsolation: false,
     },
   });
 
-  // ✅ Load built Vite HTML file
-  win.loadFile(path.join(__dirname, 'dist/index.html'));
+  
+  win.loadURL('https://hungry-hut-frontends.vercel.app');
 
-  // Optional: Open devtools for debugging
-  // win.webContents.openDevTools();
+
+  
 }
 
 app.whenReady().then(createWindow);
