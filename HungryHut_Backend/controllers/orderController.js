@@ -6,7 +6,7 @@ const stripe= new Stripe(process.env.STRIPE_SECRET_KEY)
 
 const placeOrder= async (req,res)=>{
   
-  const frontend_url = req.headers.origin || process.env.FRONTEND_URL;
+  const frontend_url = process.env.FRONTEND_URL;
 
   try {
     const newOrder = new orderModel({
