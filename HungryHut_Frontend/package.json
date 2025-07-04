@@ -48,7 +48,7 @@
     },
     "win": {
       "target": "nsis",
-      "icon": "src/assets/icon_app.ico"
+      "icon": "assets/icon_app.ico"
     }
   }
 }
