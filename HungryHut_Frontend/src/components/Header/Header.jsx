@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 import "./Header.css";
 
 const Header = () => {
@@ -13,7 +14,7 @@ const Header = () => {
           unforgettable taste. We're here to fulfill your cravings and make
           every dining moment truly special.
         </p>
-        <a href="#explore-menu"> <button>View Menu</button> </a>
+        <Link to="/#explore-menu"> <button>View Menu</button> </Link>
       </div>
     </div>
   );
