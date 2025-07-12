@@ -6,13 +6,26 @@ HungryHut is a cross-platform, full-stack food ordering application designed to 
 
 ## 🔍 Project Overview
 
-HungryHut simplifies the online food ordering experience through:
+HungryHut is a modern, full-stack food ordering platform built to streamline the user and admin experience, from meal selection to real-time order management.
 
-* Smart filtering based on nutritional goals (calories, protein, fat, carbs)
-* A sleek, responsive frontend UI for both desktop and mobile users
-* Secure user authentication & profile management
-* Real-time payment and order status updates via Stripe
-* Admin panel with food management and order control features
+    🛒 Seamless Food Ordering Experience
+    Users can browse a wide range of food items, filter by category, add to cart, and place orders in just a few clicks. Order history and status updates are available in the user dashboard.
+
+    🔐 Secure User Authentication and Profile Management
+    HungryHut supports user registration, login, password reset (via security question), and JWT-based session handling. Users can update their profile and track past orders conveniently.
+
+    🥗 Smart Nutrition-Based Filtering
+    A unique feature that allows users to enter dietary goals (Calories, Protein, Fat, Carbs). A backend algorithm filters menu items dynamically to provide personalized, health-conscious suggestions.
+
+    💳 Real-Time Payments and Order Tracking
+    Stripe integration enables secure, real-time payments. Users receive instant updates on order status, including delivery progress.
+
+    🛠️ Powerful Admin Panel
+    Admins can:
+        Add, update, or delete food items (with images & nutritional info)
+        View and manage all user orders
+        Update order statuses (e.g., "Out for Delivery")
+        Automatically generate trending food data based on order frequency
 
 ---
 
@@ -113,7 +126,7 @@ HungryHut simplifies the online food ordering experience through:
 
 ## 🌐 Live Demo
 
-[Explore HungryHut on Vercel Frontend](https://hungry-hut-frontends.vercel.app/)
+[Explore HungryHut on Vercel Frontend](https://hungry-hut-frontends.vercel.app/) <br>
 [Explore HungryHut on Vercel Admin](https://hungry-hut-admin.vercel.app/)
 
 ---
